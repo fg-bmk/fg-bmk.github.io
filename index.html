@@ -145,6 +145,7 @@
     .hero-link:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(40,33,20,.12); }
     .hero-link--primary { background: var(--ink-btn-bg); color: var(--ink-btn-color); border-color: var(--ink-btn-bg); }
     .hero-link i, .hero-link .ai { font-size: 15px; }
+    .hero-link .hf-icon { width: 15px; height: 15px; flex-shrink: 0; }
     @media (max-width: 640px) {
       .hero-masthead { gap: 14px; }
       .hero-logo { width: 44px; height: 44px; }
@@ -337,6 +338,9 @@
     .footer { padding: 48px 0; border-top: 1px solid var(--border); text-align: center; }
     .footer p { font-size: .82rem; color: var(--text-muted); line-height: 1.85; }
     .footer a { color: var(--text-2); text-decoration: underline; text-underline-offset: 2px; }
+    .footer-stats { margin-top: 18px; font-size: .78rem; color: var(--text-muted); font-family: var(--font-mono); letter-spacing: .02em; }
+    .footer-stats i { margin-right: 5px; opacity: .65; font-size: .72rem; }
+    .footer-stats span[id^="busuanzi"] { color: var(--text-2); font-weight: 600; }
 
     /* SCROLL TOP */
     .scroll-top { position: fixed; bottom: 28px; right: 28px; width: 44px; height: 44px; border-radius: 50%; background: var(--scrolltop-bg); color: var(--scrolltop-color); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; transform: translateY(10px); transition: opacity .3s, transform .3s; z-index: 90; box-shadow: 0 6px 18px rgba(40,33,20,.22); }
@@ -402,6 +406,7 @@
         <a href="https://arxiv.org/abs/2606.19053" target="_blank" class="hero-link hero-link--primary"><i class="ai ai-arxiv"></i> arXiv (Extend)</a>
         <a href="https://arxiv.org/abs/2504.14988" target="_blank" class="hero-link"><i class="ai ai-arxiv"></i> arXiv (ICLR)</a>
         <a href="https://github.com/SEU-VIPGroup/FG-BMK" target="_blank" class="hero-link"><i class="fab fa-github"></i> Code</a>
+        <a href="https://huggingface.co/datasets/SEU-VIPGroup/FG-BMK" target="_blank" class="hero-link"><img class="hf-icon" src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt=""> Hugging Face</a>
         <a href="#leaderboard" class="hero-link"><i class="fas fa-trophy"></i> Leaderboard</a>
         <a href="#dataset" class="hero-link"><i class="fas fa-database"></i> Dataset</a>
       </div>
@@ -667,8 +672,15 @@
         <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
         Licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
       </p>
+      <p class="footer-stats">
+        <i class="fas fa-eye"></i> Page views: <span id="busuanzi_value_site_pv">—</span>
+        &nbsp;&middot;&nbsp;
+        <i class="fas fa-users"></i> Visitors: <span id="busuanzi_value_site_uv">—</span>
+      </p>
     </div>
   </footer>
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.puremini.js"></script>
 
   <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
 
